@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+
+.main {
+  border: 1px solid #000; }
