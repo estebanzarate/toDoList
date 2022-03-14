@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   display: flex;
   justify-content: center;
@@ -7,3 +12,43 @@ body {
 
 .main {
   border: 1px solid #000; }
+
+.main {
+  width: 30rem;
+  min-height: 20rem; }
+
+.header {
+  padding: 1rem; }
+
+.header h1 {
+  text-align: center; }
+
+.inputList {
+  display: flex;
+  justify-content: space-evenly; }
+
+.inputItem {
+  height: 2rem;
+  padding-left: .3rem; }
+
+.btnAdd {
+  padding: .3rem .6rem; }
+
+.inputItem:focus {
+  outline: none; }
+
+.ul {
+  padding: 1rem; }
+
+.ul li {
+  list-style: none;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem; }
+
+.ul li:nth-child(odd) {
+  background: #ddffaa; }
+
+.ul li:nth-child(even) {
+  background: #00ff00; }
