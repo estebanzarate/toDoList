@@ -1,13 +1,46 @@
 @import "globals";
 
 .main {
-    width: 30rem;
+    min-width: 30rem;
     min-height: 30rem;
     display: flex;
     flex-direction: column;
-    border: unset;
-    box-shadow: inset 0 1px 10px #000000;
     padding: 1rem;
+    position: relative;
+    background: transparent;
+    border: 1px solid #F0A500;
+    // overflow: hidden;
+    @keyframes rotar {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -200%;
+        left: -200%;
+        width: 500%;
+        height: 500%;
+        background: linear-gradient(65deg, #082032,#F0A500, #082032);
+        z-index: -2;
+        animation: rotar 5s linear infinite;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        inset: 4px;
+        background: #fff;
+        z-index: -1;
+        filter: blur(25px);
+    }
     .header {
         padding: 1rem;
         h1 {
@@ -27,7 +60,10 @@
             }
         }
         .btnAdd {
-            padding: .3rem .6rem;
+            padding: .5rem 1rem;
+            background: #000000;
+            border: unset;
+            color: #fff;
         }
     }
     .ul {
@@ -39,16 +75,31 @@
             align-items: center;
             height: 2rem;
             list-style: none;
-            padding: 1.2rem 1rem;
+            padding: 1.2rem .8rem;
             margin: .5rem 0;
             font-size: 1.2rem;
+            span {
+                width: 100%;
+                margin-right: 1rem;
+            }
             &.li:nth-child(odd) {
                 background: linear-gradient(to right, transparent, #F0A500);
-                color: #082032;
+                span {
+                    background: linear-gradient(to right, #000, transparent);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
             }
             &.li:nth-child(even) {
                 background: linear-gradient(to right, #082032, transparent);
-                color: #F0A500;
+                span {
+                    background: linear-gradient(to right, #F0A500, transparent);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                .fa-trash-can {
+                    color: #F0A500;
+                }
             }
             .fa-trash-can {
                 font-size: 1.5rem;

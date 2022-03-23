@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         btnAdd = document.querySelector("#btnAdd"),
         ul = document.querySelector("#ul"),
         btnTrash = `<i class="fa-solid fa-trash-can"></i>`;
+
     let list = [];
 
     inputItem.focus();
@@ -25,8 +26,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function agregarItem() {
         if (inputItem.value !== "") {
             const li = document.createElement("li");
+            const span = document.createElement("span");
             li.classList.add("li");
-            li.textContent = inputItem.value;
+            span.textContent = inputItem.value;
+            li.appendChild(span);
             li.innerHTML += btnTrash;
             ul.appendChild(li);
             inputItem.value = "";
@@ -63,8 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
             ul.innerHTML = "";
             for (let i = 0; i < list.length; i++) {
                 const li = document.createElement("li");
+                const span = document.createElement("span");
                 li.classList.add("li");
-                li.innerHTML = list[i];
+                span.innerHTML = list[i];
+                li.appendChild(span);
                 li.innerHTML += btnTrash;
                 frag.appendChild(li);
             }
