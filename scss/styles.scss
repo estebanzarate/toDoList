@@ -8,7 +8,7 @@
     padding: 1rem;
     position: relative;
     background: transparent;
-    border: 1px solid #F0A500;
+    backdrop-filter: blur(20px);
     // overflow: hidden;
     @keyframes rotar {
         from {
@@ -45,6 +45,8 @@
         padding: 1rem;
         h1 {
             text-align: center;
+            position: relative;
+            // overflow: hidden;
         }
     }
     .inputList {

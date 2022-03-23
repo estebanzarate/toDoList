@@ -23,7 +23,7 @@ body {
   padding: 1rem;
   position: relative;
   background: transparent;
-  border: 1px solid #F0A500; }
+  backdrop-filter: blur(20px); }
 
 @keyframes rotar {
   from {
@@ -54,7 +54,8 @@ body {
   .main .header {
     padding: 1rem; }
     .main .header h1 {
-      text-align: center; }
+      text-align: center;
+      position: relative; }
   .main .inputList {
     display: flex;
     justify-content: space-evenly; }
