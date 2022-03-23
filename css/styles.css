@@ -20,7 +20,7 @@ body {
   min-height: 30rem;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 3rem;
   position: relative;
   background: transparent;
   backdrop-filter: blur(20px); }
@@ -70,7 +70,12 @@ body {
       padding: .5rem 1rem;
       background: #000000;
       border: unset;
-      color: #fff; }
+      color: #F0A500;
+      letter-spacing: 1px;
+      transition: .4s; }
+      .main .inputList .btnAdd:hover {
+        background: #082032;
+        color: #fff; }
   .main .ul {
     padding: 1rem;
     flex-grow: 1; }
@@ -92,6 +97,8 @@ body {
           background: linear-gradient(to right, #000, transparent);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent; }
+        .main .ul .li.li:nth-child(odd) .fa-trash-can:hover {
+          color: #fff; }
       .main .ul .li.li:nth-child(even) {
         background: linear-gradient(to right, #082032, transparent); }
         .main .ul .li.li:nth-child(even) span {
@@ -100,9 +107,12 @@ body {
           -webkit-text-fill-color: transparent; }
         .main .ul .li.li:nth-child(even) .fa-trash-can {
           color: #F0A500; }
+          .main .ul .li.li:nth-child(even) .fa-trash-can:hover {
+            color: #082032; }
       .main .ul .li .fa-trash-can {
         font-size: 1.5rem;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: .4s; }
   .main .footer {
     display: flex;
     justify-content: space-evenly;
@@ -111,4 +121,9 @@ body {
       padding: .5rem 1rem;
       background: #000000;
       border: unset;
-      color: #fff; }
+      color: #F0A500;
+      letter-spacing: 1px;
+      transition: .4s; }
+      .main .footer .btnFoot:hover {
+        background: #082032;
+        color: #fff; }
