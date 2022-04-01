@@ -5,19 +5,23 @@
   box-sizing: border-box; }
 
 body {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   min-height: 100vh;
-  font-family: 'Baloo Thambi 2';
-  overflow: hidden; }
+  padding-top: 5rem;
+  font-family: "Baloo Thambi 2";
+  overflow: hidden;
+  position: relative; }
 
 .main {
-  border: 1px solid #000; }
+  border: 1px solid #000;
+  background-color: #fdfdfd; }
 
 .main {
   min-width: 30rem;
-  min-height: 30rem;
+  height: 35rem;
   display: flex;
   flex-direction: column;
   padding: 3rem;
@@ -31,24 +35,24 @@ body {
   to {
     transform: rotate(360deg); } }
   .main::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -200%;
     left: -200%;
     width: 500%;
     height: 500%;
-    background: linear-gradient(65deg, #082032, #F0A500, #082032);
+    background: linear-gradient(65deg, #082032, #f0a500, #082032);
     z-index: -2;
     animation: rotar 5s linear infinite; }
   .main::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     inset: 4px;
-    background: #fff;
+    background: #e9e9e9d5;
     z-index: -1;
     filter: blur(25px); }
   .main .header {
@@ -63,16 +67,17 @@ body {
       border: unset;
       height: 2rem;
       font-size: 1.2rem;
-      border-bottom: 1px solid #F0A500; }
+      border-bottom: 1px solid #f0a500;
+      background-color: transparent; }
       .main .inputList .inputItem.inputItem:focus {
         outline: none; }
     .main .inputList .btnAdd {
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       background: #000000;
       border: unset;
-      color: #F0A500;
+      color: #f0a500;
       letter-spacing: 1px;
-      transition: .4s; }
+      transition: 0.4s; }
       .main .inputList .btnAdd:hover {
         background: #082032;
         color: #fff; }
@@ -85,14 +90,14 @@ body {
       align-items: center;
       height: 2rem;
       list-style: none;
-      padding: 1.2rem .8rem;
-      margin: .5rem 0;
+      padding: 1.2rem 0.8rem;
+      margin: 0.5rem 0;
       font-size: 1.2rem; }
       .main .ul .li span {
         width: 100%;
         margin-right: 1rem; }
       .main .ul .li.li:nth-child(odd) {
-        background: linear-gradient(to right, transparent, #F0A500); }
+        background: linear-gradient(to right, transparent, #f0a500); }
         .main .ul .li.li:nth-child(odd) span {
           background: linear-gradient(to right, #000, transparent);
           -webkit-background-clip: text;
@@ -102,28 +107,54 @@ body {
       .main .ul .li.li:nth-child(even) {
         background: linear-gradient(to right, #082032, transparent); }
         .main .ul .li.li:nth-child(even) span {
-          background: linear-gradient(to right, #F0A500, transparent);
+          background: linear-gradient(to right, #f0a500, transparent);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent; }
         .main .ul .li.li:nth-child(even) .fa-trash-can {
-          color: #F0A500; }
+          color: #f0a500; }
           .main .ul .li.li:nth-child(even) .fa-trash-can:hover {
             color: #082032; }
       .main .ul .li .fa-trash-can {
         font-size: 1.5rem;
         cursor: pointer;
-        transition: .4s; }
+        transition: 0.4s; }
+  .main .divModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(5px); }
+    .main .divModal:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border: 2px solid;
+      filter: blur(10px); }
+    .main .divModal p {
+      font-size: 1.3rem;
+      color: #535353;
+      letter-spacing: 1px; }
   .main .footer {
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem; }
+    padding: 1rem;
+    position: relative; }
     .main .footer .btnFoot {
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
       background: #000000;
       border: unset;
-      color: #F0A500;
+      color: #f0a500;
       letter-spacing: 1px;
-      transition: .4s; }
+      transition: 0.4s; }
       .main .footer .btnFoot:hover {
         background: #082032;
         color: #fff; }
